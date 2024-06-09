@@ -132,9 +132,13 @@ export function Dashboard() {
     const [selectedEmail, setSelectedEmail] = useState(null);
     const [filterValue, setFilterValue] = useState('');
     const [numEmails, setNumEmails] = useState(() => {
-      const savedNumEmails = localStorage.getItem('numEmails');
-      return savedNumEmails ? parseInt(savedNumEmails, 10) : 15;
+      if (typeof window !== 'undefined') {
+        const savedNumEmails = localStorage.getItem('numEmails');
+        return savedNumEmails ? parseInt(savedNumEmails, 10) : 15;
+      }
+      return 15;
     });
+    
   
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [isLoading, setIsLoading] = useState(false);
@@ -334,25 +338,27 @@ export function Dashboard() {
     });
   
     useEffect(() => {
-      const fetchAndUpdateEmails = () => {
-        if (session) {
-          fetchEmails(numEmails, filterValue)
-            .then((fetchedEmails) => {
-              setEmails(fetchedEmails);
-              localStorage.setItem(
-                `emails-${session.user.email}`,
-                JSON.stringify(fetchedEmails)
-              );
-            })
-            .catch((err) => console.error('Failed to fetch emails:', err));
-        }
-      };
-      fetchAndUpdateEmails();
-     
-
-  
-    
+      if (typeof window !== 'undefined' && session) {
+        const fetchAndUpdateEmails = async () => {
+          try {
+            const fetchedEmails = await fetchEmails(numEmails, filterValue);
+            setEmails(fetchedEmails);
+            localStorage.setItem(`emails-${session.user.email}`, JSON.stringify(fetchedEmails));
+          } catch (err) {
+            console.error('Failed to fetch emails:', err);
+          }
+        };
+        fetchAndUpdateEmails();
+      }
     }, [session, numEmails, filterValue]);
+
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('numEmails', numEmails);
+      }
+    }, [numEmails]);
+    
+    
 
     useEffect(() => {
       const style = document.createElement('style');
