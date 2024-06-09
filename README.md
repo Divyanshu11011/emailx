@@ -3,6 +3,18 @@
 
 Email-X is a simple Next.js application that uses Google OAuth for authentication and provides a dashboard to manage emails.
 
+# Projects Screenshots 
+![image](https://github.com/Divyanshu11011/emailx/assets/93030810/b99a67bc-db0b-4045-b1f3-7a2df1bb55b7)
+
+![image](https://github.com/Divyanshu11011/emailx/assets/93030810/e83084d9-8c09-4ad7-9c4e-18d6bb1c47ce)
+
+![image](https://github.com/Divyanshu11011/emailx/assets/93030810/62794525-d6ab-4cbd-969a-f56e3f742e7b)
+
+![image](https://github.com/Divyanshu11011/emailx/assets/93030810/9e279943-1560-493a-918d-e41f596009fe)
+
+
+
+
 ## Table of Contents
 
 - [Installation](#installation)
