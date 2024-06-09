@@ -13,6 +13,12 @@ Email-X is a web application designed for a Full-Stack Engineer Intern assignmen
 This project demonstrates skills in integrating multiple APIs, managing authentication, and creating a clean, functional user interface.
 
 # Projects Screenshots 
+
+
+https://github.com/Divyanshu11011/emailx/assets/93030810/4e3b3af4-b42a-42f2-b0b6-fb5e9e93658f
+
+
+
 ![image](https://github.com/Divyanshu11011/emailx/assets/93030810/b99a67bc-db0b-4045-b1f3-7a2df1bb55b7)
 
 ![image](https://github.com/Divyanshu11011/emailx/assets/93030810/e83084d9-8c09-4ad7-9c4e-18d6bb1c47ce)
