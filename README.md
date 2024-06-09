@@ -1,7 +1,16 @@
 
 # Email-X
 
-Email-X is a simple Next.js application that uses Google OAuth for authentication and provides a dashboard to manage emails.
+Email-X is a web application designed for a Full-Stack Engineer Intern assignment. The application provides the following functionality:
+
+- **User Authentication**: Users can log in using Google OAuth.
+- **OpenAI Key Management**: Users can input their OpenAI key, which is saved in localStorage for subsequent use.
+- **Email Fetching**: Fetch the user's last X emails from Gmail using the Gmail API.
+- **Email Classification**: Utilize OpenAI GPT-4o to classify emails into categories such as Important, Promotional, Social, Marketing, Spam, and General.
+- **Local Storage**: Store fetched emails in the user's local storage for quick access and reduced API calls.
+- **Responsive Design**: Built with Next.js and styled using Tailwind CSS for a responsive and user-friendly interface.
+
+This project demonstrates skills in integrating multiple APIs, managing authentication, and creating a clean, functional user interface.
 
 # Projects Screenshots 
 ![image](https://github.com/Divyanshu11011/emailx/assets/93030810/b99a67bc-db0b-4045-b1f3-7a2df1bb55b7)
