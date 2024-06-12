@@ -1,7 +1,7 @@
 
 # Email-X
 
-Email-X is a web application designed for a Full-Stack Engineer Intern assignment. The application provides the following functionality:
+Email-X is a web application designed for Easy Email Classifications. The application provides the following functionality:
 
 - **User Authentication**: Users can log in using Google OAuth.
 - **OpenAI Key Management**: Users can input their OpenAI key, which is saved in localStorage for subsequent use.
